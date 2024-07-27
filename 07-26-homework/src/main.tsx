@@ -6,7 +6,9 @@ import AccodionItem from "../components/AccodionItem.js";
 const container = document.getElementById("react-app");
 
 if (container) {
-  createRoot(container).render(<AccodionItem name="샐러드 · 간편식" />);
+  createRoot(container).render(
+    <AccodionItem name="샐러드 · 간편식" count="32" />
+  );
 } else {
   console.warn('문서에 "#app" 요소가 존재하지 않습니다.');
 }

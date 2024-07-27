@@ -1,0 +1,59 @@
+.accodian-items {
+  --main-color: #1e90ff;
+  --font-color: #333;
+  --font-name: Abel;
+  --input-size: 22px;
+  --input-padding: 28px;
+  --small-font-size: 0.875rem;
+  --fstyle: normal;
+  --fweight: 400;
+  --fline-height: 160%;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 5px;
+
+  span {
+    font-size: var(--small-font-size);
+    color: var(--main-color);
+    font-family: var(--font-name);
+    font-style: var(--fstyle);
+    font-weight: var(--fweight);
+    line-height: var(--fline-height);
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    input {
+      position: absolute;
+      appearance: none;
+      width: var(--input-size);
+      height: var(--input-size);
+    }
+
+    label {
+      background: url("/public/icons/isUnCheckedBtn.svg") no-repeat 0 0 /
+        contain;
+      padding-left: var(--input-padding);
+      color: var(--font-color);
+      font-family: var(--font-name);
+      font-style: var(--fstyle);
+      font-weight: var(--fweight);
+      line-height: var(--fline-height);
+    }
+    input:checked + label {
+      background: url("/public/icons/isCheckedBtn.svg") no-repeat 0 0 / contain;
+      color: var(--main-color);
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input:focus-visible {
+      outline: 2px solid var(--main-color);
+    }
+  }
+}

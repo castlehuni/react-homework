@@ -5,10 +5,13 @@ import { createRoot } from "https://esm.sh/react-dom";
 const AccodionItem = ({ name, count }): JSX.Element => {
   return (
     <>
-      <div>
-        <input type="checkbox" id="salad" />
-        <label htmlFor="salad">{name}</label>
-      </div>
+      <article className="accodian-items">
+        <div className="input-wrapper">
+          <input type="checkbox" id={name} />
+          <label htmlFor={name}>{name}</label>
+        </div>
+        <span className="item-count">{count}</span>
+      </article>
     </>
   );
 };
