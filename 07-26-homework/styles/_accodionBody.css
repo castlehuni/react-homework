@@ -1,0 +1,15 @@
+.accodion-body {
+  --gap: 16px;
+
+  display: flex;
+  flex-flow: column;
+  gap: var(--gap);
+  margin: 0;
+  padding: 30px 10px 20px;
+
+  .body-items {
+    display: flex;
+    flex-flow: row;
+    text-decoration: none;
+  }
+}
