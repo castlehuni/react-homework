@@ -13,6 +13,7 @@
   flex-flow: row;
   align-items: center;
   gap: 5px;
+  inline-size: 100%;
 
   span {
     font-size: var(--small-font-size);

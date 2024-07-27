@@ -1,0 +1,51 @@
+.accodion-header {
+  --font-gap: 4px;
+  --span-color: #1e90ff;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --font-name: Abel;
+  --fstyle: normal;
+  --fweight: 400;
+  --fline-height: 160%;
+  --p: 5px;
+  --size: 205px;
+  --button-size: 20px;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--p);
+  inline-size: var(--size);
+
+  .header-text-wrapper {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: var(--font-gap);
+
+    p {
+      font-size: var(--normal-font-size);
+      font-family: var(--font-name);
+      font-style: var(--fstyle);
+      font-weight: var(--fweight);
+      line-height: var(--fline-height);
+    }
+
+    span {
+      color: var(--span-color);
+      font-size: var(--small-font-size);
+      font-family: var(--font-name);
+      font-style: var(--fstyle);
+      font-weight: var(--fweight);
+      line-height: var(--fline-height);
+    }
+  }
+
+  button {
+    inline-size: var(--button-size);
+    block-size: var(--button-size);
+    background-color: inherit;
+    border: none;
+  }
+}

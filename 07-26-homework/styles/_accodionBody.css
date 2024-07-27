@@ -1,11 +1,13 @@
 .accodion-body {
   --gap: 16px;
+  --size: 205px;
 
   display: flex;
   flex-flow: column;
   gap: var(--gap);
   margin: 0;
   padding: 30px 10px 20px;
+  inline-size: var(--size);
 
   .body-items {
     display: flex;
