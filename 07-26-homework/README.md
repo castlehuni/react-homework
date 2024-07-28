@@ -10,6 +10,7 @@
 
 그리고 그것을 바탕으로 제작한 피그마 시안입니다.
 
+![🔗피그마 주소](https://www.figma.com/design/1JkqycHNlSO9dhtKzS4OBF/%EC%95%84%EC%BD%94%EB%94%94%EC%96%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8?node-id=0-1&t=Vz5EAAM8NCQ0Oplc-1)
 ![직접 만든 아코디언 메뉴](../07-26-homework/public/picture-for-homework-info/make-my-accodion-menu.png) <br>
 
 - 우선 아코디언 메뉴 안에 들어가는 요소인 체크박스와 라벨과 숫자를 상품의 개수를 알려주는 요소를 하나의 컴포넌트로 보았고 또한 체크박스가 체크되었을때와 체크되지 않았을때를 하나의 컴포넌트로 보았습니다.
