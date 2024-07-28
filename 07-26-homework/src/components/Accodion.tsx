@@ -10,7 +10,7 @@ const Accodion = ({ category, number, listItems }) => {
       <section className="accodion">
         <details>
           <summary>
-            <AccodionHeader category="category" number={1} />
+            <AccodionHeader category={category} number={number} />
           </summary>
           <article>
             <AccodionBody data={listItems} />

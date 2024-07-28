@@ -7,7 +7,7 @@ var Accodion = function (_a) {
         React.createElement("section", { className: "accodion" },
             React.createElement("details", null,
                 React.createElement("summary", null,
-                    React.createElement(AccodionHeader, { category: "category", number: 1 })),
+                    React.createElement(AccodionHeader, { category: category, number: number })),
                 React.createElement("article", null,
                     React.createElement(AccodionBody, { data: listItems }))))));
 };
