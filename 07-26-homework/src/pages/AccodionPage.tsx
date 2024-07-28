@@ -9,7 +9,7 @@ const AccodionPage = () => {
     <>
       <div className="accodion-pages">
         <Accodion
-          category="category"
+          category="카테고리"
           number={1}
           listItems={listItems.categorys}
         />
