@@ -10,12 +10,10 @@ const AccodionHeader = ({ category, number }) => {
           <p>{category}</p>
           <span>{number}</span>
         </div>
-        <button type="button">
-          <img
-            src="../public/icons/upperArrow.svg"
-            alt="아코디언 화살표 버튼 사진"
-          />
-        </button>
+        <img
+          src="../public/icons/upperArrow.svg"
+          alt="아코디언 화살표 버튼 사진"
+        />
       </nav>
     </>
   );

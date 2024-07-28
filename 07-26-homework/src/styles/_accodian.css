@@ -1,0 +1,27 @@
+.accodion {
+  --border-color: #c4c4c4;
+
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 4px;
+
+  .accodion-header img {
+    transition: transform 0.3s;
+  }
+
+  details[open] .accodion-header img {
+    transform: rotate(180deg);
+  }
+
+  summary {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+
+    &::marker {
+      content: "";
+    }
+  }
+}

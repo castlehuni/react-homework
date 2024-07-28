@@ -9,7 +9,6 @@
   --fline-height: 160%;
   --p: 5px;
   --size: 205px;
-  --button-size: 20px;
 
   display: flex;
   flex-flow: row;
@@ -40,12 +39,5 @@
       font-weight: var(--fweight);
       line-height: var(--fline-height);
     }
-  }
-
-  button {
-    inline-size: var(--button-size);
-    block-size: var(--button-size);
-    background-color: inherit;
-    border: none;
   }
 }
