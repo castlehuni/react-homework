@@ -10,7 +10,7 @@
 
 그리고 그것을 바탕으로 제작한 피그마 시안입니다.
 
-![🔗피그마 주소](https://www.figma.com/design/1JkqycHNlSO9dhtKzS4OBF/%EC%95%84%EC%BD%94%EB%94%94%EC%96%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8?node-id=0-1&t=Vz5EAAM8NCQ0Oplc-1)
+[🔗피그마 주소](https://www.figma.com/design/1JkqycHNlSO9dhtKzS4OBF/%EC%95%84%EC%BD%94%EB%94%94%EC%96%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8?node-id=0-1&t=Vz5EAAM8NCQ0Oplc-1)
 ![직접 만든 아코디언 메뉴](../07-26-homework/public/picture-for-homework-info/make-my-accodion-menu.png) <br>
 
 - 우선 아코디언 메뉴 안에 들어가는 요소인 체크박스와 라벨과 숫자를 상품의 개수를 알려주는 요소를 하나의 컴포넌트로 보았고 또한 체크박스가 체크되었을때와 체크되지 않았을때를 하나의 컴포넌트로 보았습니다.
@@ -84,7 +84,7 @@
 ### 그 외 요소들
 
 - public/icons: input요소와 화살표 등의 아코디언 컴포넌트에 필요한 svg를 저장한 폴더
-- data/datas.js: accodionItem에 필요한 값들을 저장한 객체
+- data/datas.js: accodionItem에 필요한 값들을 저장한 객체<br><br>
 
 ## 과제 수행 중 발생했던 문제와 해결 방법
 
@@ -99,7 +99,7 @@
 
 - 역시 props를 다루는 것은 어렵다는 것을 다시 한번 느낄 수 있었다.
 - 이번 과제를 수행하면서 jsx로 수행하였는데 역시 jsx의 소중함을 다시 한 번 느낄 수 있었다.
-- 확실히 컴포넌트 요소로 나누어서 진행하니 코드도 보다 깔끔해지고 한번에 알아보기도 훨씬 좋다는 것을 느낄 수 있었다.
+- 확실히 컴포넌트 요소로 나누어서 진행하니 코드도 보다 깔끔해지고 한번에 알아보기도 훨씬 좋다는 것을 느낄 수 있었다.<br><br>
 
 ## 과제 수행 하면서 질문 사항
 
