@@ -3,11 +3,14 @@
   --gap: 10px;
   --discount-color: #1e90ff;
   --original-color: #000;
+  --border-bottom-color: #d9d9d9;
 
   display: flex;
   flex-flow: column;
   gap: var(--gap);
   width: var(--width);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-bottom-color);
 
   .product-name {
     color: var(--original-color);

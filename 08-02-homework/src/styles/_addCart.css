@@ -1,0 +1,14 @@
+.addCart {
+  --width: 430px;
+  --gap: 16px;
+  --paddings: 20px;
+
+  width: var(--width);
+  padding: var(--paddings);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: var(--gap);
+  box-shadow: 0px 8px 36px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}

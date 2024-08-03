@@ -1,15 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import AddCartSum from "@/components/AddCartSum";
-import ButtonContainer from "@/components/ButtonContainer";
+import AddCart from "@/components/AddCart";
 
 const container = document.getElementById("react-app");
 
 if (container) {
   createRoot(container).render(
     <StrictMode>
-      <AddCartSum />
-      <ButtonContainer />
+      <AddCart />
     </StrictMode>
   );
 } else {

@@ -4,12 +4,15 @@
   --pic-height: 60px;
   --gap: 15px;
   --font-color: #000;
+  --border-bottom-color: #d9d9d9;
 
   width: var(--width);
   display: flex;
   flex-flow: row;
   gap: var(--gap);
   align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-bottom-color);
 
   img {
     width: var(--pic-width);

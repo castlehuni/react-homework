@@ -1,7 +1,17 @@
+import AddCartHeader from "./AddCartHeader";
+import AddCartCounter from "./AddCartCounter";
+import AddCartSum from "./AddCartSum";
+import ButtonContainer from "./ButtonContainer";
+
 const AddCart = () => {
   return (
     <>
-      <h1>컴포넌트 템플릿</h1>
+      <section className="addCart">
+        <AddCartHeader />
+        <AddCartCounter />
+        <AddCartSum />
+        <ButtonContainer />
+      </section>
     </>
   );
 };
