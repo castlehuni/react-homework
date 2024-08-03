@@ -1,0 +1,33 @@
+.plusMinusButton {
+  --width: 90px;
+  --btn-width: 30px;
+  --height: 30px;
+  --font-color: #6b6b6b;
+  --gap: 10px;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: var(--gap);
+  width: var(--width);
+  height: var(--height);
+  border: 1px solid var(--font-color);
+
+  .plusAndMinusButtons {
+    padding: 0;
+    width: var(--btn-width);
+    height: var(--height);
+    background-color: white;
+    border: none;
+  }
+
+  p {
+    color: var(--font-color);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

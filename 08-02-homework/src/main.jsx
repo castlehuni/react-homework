@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import PageTemplate from "@/pages/pageTemplate";
+import PlusMinusButton from "@/components/PlusMinusButton";
 
 const container = document.getElementById("react-app");
 
 if (container) {
   createRoot(container).render(
     <StrictMode>
-      <PageTemplate />
+      <PlusMinusButton />
     </StrictMode>
   );
 } else {
