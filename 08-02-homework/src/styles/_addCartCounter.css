@@ -1,0 +1,54 @@
+.AddCartCounter {
+  --width: 387px;
+  --gap: 10px;
+  --discount-color: #1e90ff;
+  --original-color: #000;
+
+  display: flex;
+  flex-flow: column;
+  gap: var(--gap);
+  width: var(--width);
+
+  .product-name {
+    color: var(--original-color);
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  .count-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .price-container {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      gap: var(--gap);
+
+      .real-price {
+        color: var(--original-color);
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        margin: 0;
+      }
+      .original-price {
+        color: var(--discount-color);
+        font-family: Inter;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 171.429%;
+        text-decoration-line: line-through;
+        margin: 0;
+      }
+    }
+  }
+}
