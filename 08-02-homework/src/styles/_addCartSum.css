@@ -1,0 +1,68 @@
+.AddCartSum {
+  --width: 387px;
+  --gap: 4px;
+  --original-color: #000;
+  --primary-color: #1e90ff;
+  --badge-color: #fa622f;
+  --badge-gap: 12px;
+
+  display: flex;
+  flex-flow: column;
+  width: var(--width);
+  gap: var(--gap);
+
+  .showTotalPrice {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    span {
+      color: var(--original-color);
+      font-family: Inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    .totalPrice {
+      margin: 0;
+      color: var(--primary-color);
+      font-family: Inter;
+      font-size: 1.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+    }
+  }
+
+  .pointContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: end;
+    align-items: center;
+    gap: var(--badge-gap);
+
+    .tagNames {
+      background-color: var(--badge-color);
+      padding: 0px 8px;
+      border-radius: 1px;
+      color: white;
+      font-family: Inter;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+    .pointInfo {
+      margin: 0;
+      color: var(--original-color);
+      font-family: Inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+}

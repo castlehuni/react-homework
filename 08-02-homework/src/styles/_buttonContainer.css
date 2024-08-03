@@ -1,0 +1,44 @@
+.ButtonContainer {
+  --width: 387px;
+  --btn-width: 180px;
+  --btn-height: 55px;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --black: #333;
+  --radius: 4px;
+
+  width: var(--width);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  .add-cart-btn {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    border-radius: var(--radius);
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+  }
+
+  .cancle-btn {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    border-radius: var(--radius);
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+  }
+}
