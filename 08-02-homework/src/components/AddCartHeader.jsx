@@ -1,7 +1,12 @@
+import sobaPicPath from "@/assets/foods/soba.jpg?url";
+
 const AddCartHeader = () => {
   return (
     <>
-      <h1>컴포넌트 템플릿</h1>
+      <article className="AddCartHeader">
+        <img src={sobaPicPath} alt="소바 이미지" />
+        <p>[하코야]살얼음 동동 냉메밀 소바 2인분</p>
+      </article>
     </>
   );
 };

@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import PlusMinusButton from "@/components/PlusMinusButton";
+import AddCartHeader from "@/components/AddCartHeader";
 
 const container = document.getElementById("react-app");
 
 if (container) {
   createRoot(container).render(
     <StrictMode>
-      <PlusMinusButton />
+      <AddCartHeader />
     </StrictMode>
   );
 } else {
