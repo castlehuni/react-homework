@@ -1,13 +1,18 @@
-import sobaPicPath from "@/assets/foods/soba.jpg?url";
+import { productsType } from "@/@types/globals.d";
 
-const AddCartHeader = () => {
+const AddCartHeader = ({ products }) => {
+  const { images, title } = products;
   return (
     <>
       <article className="AddCartHeader">
-        <img src={sobaPicPath} alt="소바 이미지" />
-        <p>[하코야]살얼음 동동 냉메밀 소바 2인분</p>
+        <img src={images} alt="소바 이미지" />
+        <p>{title}</p>
       </article>
     </>
   );
 };
 export default AddCartHeader;
+
+AddCartHeader.propTypes = {
+  products: productsType.isRequired,
+};
