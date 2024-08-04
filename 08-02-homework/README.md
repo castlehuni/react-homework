@@ -134,7 +134,7 @@ export const productsType = exact({
 export const priceType = number;
 ```
 
-<br><br>
+<br>
 
 ## 과제 수행 후 느낀점
 
@@ -143,6 +143,28 @@ export const priceType = number;
 - 이번에 새로 만들다 보니 시간이 부족해서 타입스크립트로 할 시간이 부족해 조금 아쉬웠는데 다음에 시간이 된다면 타입스크립트로도 한번 해봐야 할 것 같다
 - 이번에는 시간이 없어서 useState와 useEffect를 사용했는데 다음에는 이거 없이 해볼 수 있도록 해봐야겠다
 
-<br><br>
+<br>
 
 ## 과제 수행 하면서 질문 사항
+
+이번 과제를 수행하면서 궁금한 점이 있다면 `globals.d.js`에 `export const priceType = number.isRequired;`와 같이 값을 추가하고  
+다음과 같이 AddCartSum.jsx에 아래와 같은 코드를 설정하였더니
+
+```js
+AddCartSum.propTypes = {
+  price: priceType.isRequired,
+};
+```
+
+아래 보이는 것처럼 다음과 같은 warning이 발생했는데 막상 `export const priceType = number.isRequired;`에서 isRequired를 제거하면 또 waning이 발생하지 않는데 왜 그런지 모르겠다.
+
+```text
+@react-refresh:267 Warning: Failed prop type: AddCartSum: prop type `price` is invalid; it must be a function, usually from the `prop-types` package, but received `undefined`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.
+    at AddCartSum (http://localhost/src/components/AddCartSum.jsx?t=1722764077568:19:23)
+    at section
+    at AddCart (http://localhost/src/components/AddCart.jsx?t=1722759316416:27:29)
+```
+
+`export const priceType = number.isRequired;`에서 isRequired를 제거하면 또 waning이 발생하지 않는데 왜 그런지 모르겠다.
+
+그리고 이 warning은 `globals.d.js`에서 addProducts, minusProducts를 `export const addProducts(or minusProducts) = func.isRequired;`와 같이 설정하고 실행해도 같은 문제가 발생하고 count를 저런식으로 설정해도 위와 같은 warning이 발생한다
