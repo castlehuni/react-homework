@@ -6,3 +6,5 @@ export const productsType = exact({
   price: number,
   discount: number,
 });
+
+export const priceType = number;
