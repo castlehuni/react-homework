@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Sqaures from "@/tic-tac-toe/components/Squares/Squares";
+import Games from "./tic-tac-toe/Games";
 
 const container = document.getElementById("react-app");
 
 if (container) {
   createRoot(container).render(
     <StrictMode>
-      <Sqaures />
+      <Games />
     </StrictMode>
   );
 } else {

@@ -1,7 +1,23 @@
+import Square from "../Square/Square";
+
 const Squares = () => {
   return (
     <>
-      <h1>Squares</h1>
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
     </>
   );
 };

@@ -1,8 +1,12 @@
+import Board from "./components/Board/Board";
+import History from "./components/History/History";
+
 const Games = () => {
   return (
-    <>
-      <h1>게임</h1>
-    </>
+    <div className="Game">
+      <Board />
+      <History />
+    </div>
   );
 };
 
