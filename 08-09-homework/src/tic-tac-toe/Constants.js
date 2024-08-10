@@ -43,3 +43,8 @@ export const checkWinner = (squares) => {
   }
   return winnerInfo;
 };
+
+export const WINNER_COLER = {
+  SUN: "rgb(245, 243, 132)",
+  MOON: "rgb(43, 43, 43)",
+};
