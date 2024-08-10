@@ -1,3 +1,5 @@
+import { OneOfPlayerType } from "@/tic-tac-toe/types/type.d";
+import { bool } from "prop-types";
 import StatusStyles from "./Status.module.css";
 
 const Status = ({ nextPlayer, winners, isDraw }) => {
@@ -15,3 +17,9 @@ const Status = ({ nextPlayer, winners, isDraw }) => {
 };
 
 export default Status;
+
+Status.propTypes = {
+  nextPlayer: OneOfPlayerType.isRequired,
+  winners: OneOfPlayerType,
+  isDraw: bool,
+};
