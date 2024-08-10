@@ -1,6 +1,8 @@
+import HistoryStyles from "./History.module.css";
+
 const History = () => {
   return (
-    <div className="History">
+    <div className={HistoryStyles.History}>
       <ol>
         <li>
           <button type="button">게임 시작</button>
