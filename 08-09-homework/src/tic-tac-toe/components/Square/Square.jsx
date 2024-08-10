@@ -1,3 +1,4 @@
+import { node } from "prop-types";
 import SquareStyles from "./Square.module.css";
 
 const Square = ({ children }) => {
@@ -16,3 +17,7 @@ const Square = ({ children }) => {
   );
 };
 export default Square;
+
+Square.propTypes = {
+  children: node,
+};
