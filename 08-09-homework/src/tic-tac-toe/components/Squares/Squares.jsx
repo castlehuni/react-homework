@@ -1,39 +1,13 @@
-import { useState } from "react";
+import { PLAYER_LIST, WINNER_COLER } from "@/tic-tac-toe/Constants";
 import {
-  checkWinner,
-  PLAYER,
-  PLAYER_NUMBER,
-  SQUARE_LIST,
-  WINNER_COLER,
-} from "@/tic-tac-toe/Constants";
+  WhosWinnerType,
+  OneOfPlayerListType,
+} from "@/tic-tac-toe/types/type.d";
+import { func } from "prop-types";
 import Square from "../Square/Square";
 import SquaresStyles from "./Squares.module.css";
 
-const Squares = () => {
-  const [squares, setSquares] = useState(SQUARE_LIST);
-
-  function onGamePlay(index) {
-    return function () {
-      if (whosWinner) {
-        alert(`Game Over!! 승자는 ${whosWinner.winners}`);
-        return;
-      }
-
-      setSquares((prevSquares) => {
-        const nextSquares = prevSquares.map((square, squareIndex) => {
-          return index === squareIndex ? currentPlayer : square;
-        });
-        return nextSquares;
-      });
-    };
-  }
-
-  const gameIndex = squares.filter(Boolean).length % PLAYER_NUMBER;
-
-  const currentPlayer = gameIndex === 0 ? PLAYER.ONE : PLAYER.TWO;
-
-  const whosWinner = checkWinner(squares);
-
+const Squares = ({ squares, whosWinner, onGamePlay }) => {
   return (
     <div className={SquaresStyles.Squares}>
       {squares.map((square, index) => {
@@ -45,7 +19,7 @@ const Squares = () => {
           const [x, y, z, k] = whosWinner.condition;
 
           if (x === index || y === index || z === index || k === index) {
-            whosWinner.winners === PLAYER.ONE
+            whosWinner.winners === PLAYER_LIST[0]
               ? (winnerStyles.backgroundColor = WINNER_COLER.SUN)
               : (winnerStyles.backgroundColor = WINNER_COLER.MOON);
           }
@@ -60,3 +34,9 @@ const Squares = () => {
   );
 };
 export default Squares;
+
+Squares.propTypes = {
+  squares: OneOfPlayerListType.isRequired,
+  whosWinner: WhosWinnerType,
+  onGamePlay: func,
+};

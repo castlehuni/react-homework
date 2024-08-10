@@ -3,6 +3,8 @@ export const PLAYER = {
   TWO: "🌝",
 };
 
+export const PLAYER_LIST = Object.values(PLAYER);
+
 export const PLAYER_NUMBER = Object.keys(PLAYER).length;
 
 export const SQUARE_LIST = Array(16).fill(null);
