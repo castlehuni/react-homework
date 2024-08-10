@@ -18,8 +18,15 @@ const Games = () => {
   function handleGamePlay(index) {
     return function () {
       if (whosWinner) {
-        alert(`Game Over!! 승자는 ${whosWinner.winners}`);
-        return;
+        if (
+          confirm(
+            `Game Over!! 승자는 ${whosWinner.winners}\n 다시 하시겠습니까?`
+          )
+        ) {
+          setGameHistory([SQUARE_LIST]);
+          setGameIndex(0);
+          return;
+        } else return;
       }
 
       const nextGameIndex = gameIndex + 1;
@@ -30,10 +37,17 @@ const Games = () => {
         return index === squareIndex ? nextPlayer : square;
       });
 
-      const nextGameHistory = [...gameHistory, nextSquares];
+      const nextGameHistory = [
+        ...gameHistory.slice(0, nextGameIndex),
+        nextSquares,
+      ];
 
       setGameHistory(nextGameHistory);
     };
+  }
+
+  function handleTimeTravel(index) {
+    setGameIndex(index);
   }
 
   const currentSquares = gameHistory[gameIndex];
@@ -56,7 +70,11 @@ const Games = () => {
         whosWinner={whosWinner}
         onGamePlay={handleGamePlay}
       />
-      <History gameHistory={gameHistory} />
+      <History
+        gameHistory={gameHistory}
+        gameIndex={gameIndex}
+        timeTravel={handleTimeTravel}
+      />
     </div>
   );
 };
