@@ -1,43 +1,14 @@
+import {
+  OneOfPlayerListType,
+  OneOfPlayerType,
+  WhosWinnerType,
+} from "@/tic-tac-toe/types/type.d";
+import { bool, func } from "prop-types";
 import Squares from "../Squares/Squares";
 import Status from "../Status/Status";
-import { useState } from "react";
-import {
-  checkWinner,
-  PLAYER,
-  PLAYER_NUMBER,
-  SQUARE_LIST,
-} from "@/tic-tac-toe/Constants";
 import BoardStyles from "./Board.module.css";
 
-const Board = () => {
-  const [squares, setSquares] = useState(SQUARE_LIST);
-
-  function handleGamePlay(index) {
-    return function () {
-      if (whosWinner) {
-        alert(`Game Over!! 승자는 ${whosWinner.winners}`);
-        return;
-      }
-
-      setSquares((prevSquares) => {
-        const nextSquares = prevSquares.map((square, squareIndex) => {
-          return index === squareIndex ? nextPlayer : square;
-        });
-        return nextSquares;
-      });
-    };
-  }
-
-  const gameIndex = squares.filter(Boolean).length;
-
-  const isPlayerOnesTurn = gameIndex % PLAYER_NUMBER === 0;
-
-  const nextPlayer = isPlayerOnesTurn ? PLAYER.ONE : PLAYER.TWO;
-
-  const whosWinner = checkWinner(squares);
-
-  const isDraw = !whosWinner && squares.every(Boolean);
-
+const Board = ({ squares, nextPlayer, isDraw, whosWinner, onGamePlay }) => {
   return (
     <div className={BoardStyles.Board}>
       <Status
@@ -48,9 +19,17 @@ const Board = () => {
       <Squares
         squares={squares}
         whosWinner={whosWinner}
-        onGamePlay={handleGamePlay}
+        onGamePlay={onGamePlay}
       />
     </div>
   );
 };
 export default Board;
+
+Board.propTypes = {
+  squares: OneOfPlayerListType,
+  nextPlayer: OneOfPlayerType.isRequired,
+  isDraw: bool,
+  whosWinner: WhosWinnerType,
+  onGamePlay: func,
+};

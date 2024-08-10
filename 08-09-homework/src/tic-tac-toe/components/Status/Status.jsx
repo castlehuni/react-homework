@@ -13,7 +13,7 @@ const Status = ({ nextPlayer, winners, isDraw }) => {
       </div>
     );
   }
-  return <div className={StatusStyles.Status}>이번 순서: {nextPlayer}</div>;
+  return <div className={StatusStyles.Status}>다음 플레이어: {nextPlayer}</div>;
 };
 
 export default Status;
