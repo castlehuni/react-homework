@@ -11,7 +11,9 @@ import Board from "./components/Board/Board";
 import History from "./components/History/History";
 
 const Games = () => {
-  const [squares, setSquares] = useState(SQUARE_LIST);
+  const [gameHistory, setGameHistory] = useState([SQUARE_LIST]);
+
+  const [gameIndex, setGameIndex] = useState(0);
 
   function handleGamePlay(index) {
     return function () {
@@ -20,35 +22,41 @@ const Games = () => {
         return;
       }
 
-      setSquares((prevSquares) => {
-        const nextSquares = prevSquares.map((square, squareIndex) => {
-          return index === squareIndex ? nextPlayer : square;
-        });
-        return nextSquares;
+      const nextGameIndex = gameIndex + 1;
+
+      setGameIndex(nextGameIndex);
+
+      const nextSquares = currentSquares.map((square, squareIndex) => {
+        return index === squareIndex ? nextPlayer : square;
       });
+
+      const nextGameHistory = [...gameHistory, nextSquares];
+
+      setGameHistory(nextGameHistory);
     };
   }
 
-  const gameIndex = squares.filter(Boolean).length;
+  const currentSquares = gameHistory[gameIndex];
 
-  const isPlayerOnesTurn = gameIndex % PLAYER_NUMBER === 0;
+  const isPlayerOnesTurn =
+    currentSquares.filter(Boolean).length % PLAYER_NUMBER === 0;
 
   const nextPlayer = isPlayerOnesTurn ? PLAYER.ONE : PLAYER.TWO;
 
-  const whosWinner = checkWinner(squares);
+  const whosWinner = checkWinner(currentSquares);
 
-  const isDraw = !whosWinner && squares.every(Boolean);
+  const isDraw = !whosWinner && currentSquares.every(Boolean);
 
   return (
     <div className={GamesStyles.Games}>
       <Board
-        squares={squares}
+        squares={currentSquares}
         nextPlayer={nextPlayer}
         isDraw={isDraw}
         whosWinner={whosWinner}
         onGamePlay={handleGamePlay}
       />
-      <History />
+      <History gameHistory={gameHistory} />
     </div>
   );
 };

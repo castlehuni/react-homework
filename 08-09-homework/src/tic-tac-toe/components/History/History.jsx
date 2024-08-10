@@ -1,12 +1,17 @@
 import HistoryStyles from "./History.module.css";
 
-const History = () => {
+const History = ({ gameHistory = [] }) => {
   return (
     <div className={HistoryStyles.History}>
       <ol>
-        <li>
-          <button type="button">게임 시작</button>
-        </li>
+        {gameHistory.map((item, index) => {
+          const buttonLabel = index === 0 ? "게임 시작" : `게임 #${index}`;
+          return (
+            <li key={index}>
+              <button type="button">{buttonLabel}</button>
+            </li>
+          );
+        })}
       </ol>
     </div>
   );
