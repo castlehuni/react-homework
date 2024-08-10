@@ -14,6 +14,11 @@ const Squares = () => {
 
   function onGamePlay(index) {
     return function () {
+      if (whosWinner) {
+        alert(`Game Over!! 승자는 ${whosWinner.winners}`);
+        return;
+      }
+
       setSquares((prevSquares) => {
         const nextSquares = prevSquares.map((square, squareIndex) => {
           return index === squareIndex ? currentPlayer : square;
@@ -28,7 +33,6 @@ const Squares = () => {
   const currentPlayer = gameIndex === 0 ? PLAYER.ONE : PLAYER.TWO;
 
   const whosWinner = checkWinner(squares);
-  console.log(whosWinner);
 
   return (
     <div className={SquaresStyles.Squares}>
