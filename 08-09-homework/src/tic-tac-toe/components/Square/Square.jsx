@@ -1,7 +1,17 @@
-const Square = () => {
+import SquareStyles from "./Square.module.css";
+
+const Square = ({ children }) => {
+  const isDisabled = !!children;
+
   return (
     <>
-      <button>value</button>
+      <button
+        type="button"
+        className={SquareStyles.Square}
+        disabled={isDisabled}
+      >
+        {children}
+      </button>
     </>
   );
 };
