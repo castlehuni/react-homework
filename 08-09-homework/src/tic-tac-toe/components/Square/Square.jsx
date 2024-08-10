@@ -1,7 +1,8 @@
 import { node } from "prop-types";
 import SquareStyles from "./Square.module.css";
 
-const Square = ({ children }) => {
+const Square = ({ children, onPlay }) => {
+  console.log(onPlay);
   const isDisabled = !!children;
 
   return (
@@ -10,6 +11,7 @@ const Square = ({ children }) => {
         type="button"
         className={SquareStyles.Square}
         disabled={isDisabled}
+        onClick={onPlay}
       >
         {children}
       </button>
