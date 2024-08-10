@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { PLAYER, PLAYER_NUMBER, SQUARE_LIST } from "@/tic-tac-toe/Constants";
+import {
+  checkWinner,
+  PLAYER,
+  PLAYER_NUMBER,
+  SQUARE_LIST,
+} from "@/tic-tac-toe/Constants";
 import Square from "../Square/Square";
 import SquaresStyles from "./Squares.module.css";
 
@@ -8,7 +13,12 @@ const Squares = () => {
 
   function onGamePlay(index) {
     return function () {
-      console.log(`index #${index}`);
+      setSquares((prevSquares) => {
+        const nextSquares = prevSquares.map((square, squareIndex) => {
+          return index === squareIndex ? currentPlayer : square;
+        });
+        return nextSquares;
+      });
     };
   }
 
@@ -16,7 +26,8 @@ const Squares = () => {
 
   const currentPlayer = gameIndex === 0 ? PLAYER.ONE : PLAYER.TWO;
 
-  console.log(currentPlayer);
+  const whosWinner = checkWinner(squares);
+  console.log(whosWinner);
 
   return (
     <div className={SquaresStyles.Squares}>
