@@ -21,22 +21,30 @@ const Board = () => {
 
       setSquares((prevSquares) => {
         const nextSquares = prevSquares.map((square, squareIndex) => {
-          return index === squareIndex ? currentPlayer : square;
+          return index === squareIndex ? nextPlayer : square;
         });
         return nextSquares;
       });
     };
   }
 
-  const gameIndex = squares.filter(Boolean).length % PLAYER_NUMBER;
+  const gameIndex = squares.filter(Boolean).length;
 
-  const currentPlayer = gameIndex === 0 ? PLAYER.ONE : PLAYER.TWO;
+  const isPlayerOnesTurn = gameIndex % PLAYER_NUMBER === 0;
+
+  const nextPlayer = isPlayerOnesTurn ? PLAYER.ONE : PLAYER.TWO;
 
   const whosWinner = checkWinner(squares);
 
+  const isDraw = !whosWinner && squares.every(Boolean);
+
   return (
     <div className={BoardStyles.Board}>
-      <Status />
+      <Status
+        nextPlayer={nextPlayer}
+        winners={whosWinner?.winners}
+        isDraw={isDraw}
+      />
       <Squares
         squares={squares}
         whosWinner={whosWinner}
