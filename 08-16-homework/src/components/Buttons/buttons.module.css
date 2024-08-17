@@ -1,0 +1,41 @@
+.Button_Blue {
+  border: none;
+  border-radius: 12px;
+  color: var(--lightblue);
+  background-color: var(--dodgerblue);
+  padding: 18px 20px;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Button_Light_Blue {
+  border: none;
+  border-radius: 12px;
+  color: var(--dodgerblue);
+  background-color: var(--lightblue);
+  padding: 18px 20px;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Button_Gray {
+  border: none;
+  border-radius: 12px;
+  color: var(--gray-300);
+  background-color: var(--gray-200);
+  padding: 18px 20px;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

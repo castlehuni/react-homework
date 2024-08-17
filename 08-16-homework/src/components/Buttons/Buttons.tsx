@@ -1,7 +1,19 @@
-const Buttons = () => {
+import ButtonStyled from "./buttons.module.css";
+
+interface ButtonsProps {
+  labelName: string;
+  classNames: string;
+  onButtonClick: Function;
+}
+
+const Buttons = ({ labelName, classNames, onButtonClick }: ButtonsProps) => {
+  let changeClassName = ButtonStyled[classNames];
+
   return (
     <>
-      <h1>컴포넌트 템플릿</h1>
+      <button type="button" className={ButtonStyled.Button_Gray}>
+        + 생각났어{labelName}
+      </button>
     </>
   );
 };

@@ -1,9 +1,9 @@
-import ComponentTemplate from "@/components/componentTemplate";
+import Buttons from "@/components/Buttons/Buttons";
 
 const TodayDoIt = () => {
   return (
     <>
-      <ComponentTemplate />
+      <Buttons />
       <h1>페이지 템플릿</h1>
     </>
   );

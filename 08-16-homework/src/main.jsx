@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import "@/styles/global.css";
 import TodayDoIt from "@/pages/TodayDoIt";
 
 const container = document.getElementById("react-app");
