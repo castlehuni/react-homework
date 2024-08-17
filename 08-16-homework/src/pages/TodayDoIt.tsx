@@ -1,9 +1,9 @@
-import Buttons from "@/components/Buttons/Buttons";
+import Status from "@/components/Status/Status";
 
 const TodayDoIt = () => {
   return (
     <>
-      <Buttons />
+      <Status />
       <h1>페이지 템플릿</h1>
     </>
   );

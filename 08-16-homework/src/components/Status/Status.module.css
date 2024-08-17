@@ -1,0 +1,36 @@
+.Status {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 4px;
+
+  .statusLabel {
+    color: var(--gray-300);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .countNum {
+    background-color: var(--gray-300);
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: var(--white);
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.isClicked {
+  .statusLabel {
+    color: var(--blue);
+  }
+  .countNum {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+}
